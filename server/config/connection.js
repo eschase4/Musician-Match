@@ -1,5 +1,12 @@
+const { a } = require('@react-spring/native');
 const mongoose = require('mongoose');
 
-mongoose.connect(process.env.MONGODB_URI || 'mongodb://127.0.0.1:27017/musician-match');
+require('dotenv').config();
+const atlasPass = process.env.ATLAS_PASSWD;
+const atlasUser = process.env.ATLAS_USER
+
+console.log(atlasPass, atlasUser)
+
+mongoose.connect(process.env.MONGODB_URI || `mongodb+srv://${atlasUser}:${atlasPass}@cluster0.ptwwxd7.mongodb.net/googlebooks`);
 
 module.exports = mongoose.connection;
