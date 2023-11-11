@@ -1,4 +1,3 @@
-const { a } = require('@react-spring/native');
 const mongoose = require('mongoose');
 
 require('dotenv').config();
