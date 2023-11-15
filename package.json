@@ -12,7 +12,8 @@
     "dev": "concurrently \"cd server && npm run watch\" \"cd client && npm start\"",
     "install": "cd server && npm i && cd ../client && npm i",
     "seed": "node seed-bootstrap.js",
-    "build": "cd ./client && npm run build"
+    "build": "cd ./client && npm run build",
+    "heroku-postbuild": "cd client && npm install && npm run build"
   },
   "keywords": [],
   "dependencies": {
