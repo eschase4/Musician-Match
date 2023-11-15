@@ -12,7 +12,7 @@
     "dev": "concurrently \"cd server && npm run watch\" \"cd client && npm start\"",
     "install": "cd server && npm i && cd ../client && npm i",
     "seed": "node seed-bootstrap.js",
-    "build": "cd ./client && react-scripts build"
+    "build": "cd ./client && npm run build"
   },
   "keywords": [],
   "dependencies": {
